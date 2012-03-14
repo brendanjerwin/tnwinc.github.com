@@ -9,8 +9,8 @@ pygments: true
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : DevLabs
-tagline: The Network
+# title : DevLabs
+# tagline: The Network
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
@@ -105,7 +105,7 @@ JB :
   # Set 'provider' to false to turn sharing off globally.
   #
   sharing :
-    provider : false
+    provider : tweet
 
   # Settings for all other include helpers can be defined by creating
   # a hash with key named for the given helper. ex:

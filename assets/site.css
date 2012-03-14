@@ -29,3 +29,8 @@ ul.posts.recent a{
 ul.posts.recent li{
     margin-bottom: 10px;
 }
+
+.entry-content > p{
+    font-family: 'Crimson Text', serif;
+    font-size: 16pt;
+}

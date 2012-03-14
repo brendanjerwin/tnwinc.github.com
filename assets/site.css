@@ -7,3 +7,25 @@ header.the-header .unit-head-inner{
 header.the-header .unit-head-inner nav{
     margin-top: 155px;
 }
+
+ul.posts.recent{
+    list-style-type: none;
+    font-size: 16pt;
+}
+
+ul.posts.recent .author{
+    margin-right: 5px;
+}
+
+ul.posts.recent .date{
+    font-style: italic;
+}
+
+ul.posts.recent a{
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+ul.posts.recent li{
+    margin-bottom: 10px;
+}

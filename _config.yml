@@ -9,7 +9,7 @@ pygments: true
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-# title : DevLabs
+title : 'The Network: Dev Labs'
 # tagline: The Network
 
 # The production_url is only used when full-domain names are needed

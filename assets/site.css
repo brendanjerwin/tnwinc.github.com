@@ -4,8 +4,8 @@ body { padding-bottom: 80px; }
   font: Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, "MS PGothic", Osaka, Sans-Serif;
 }
 
-a { color: #2d2d2d; text-decoration: none; }
-a:hover { text-decoration: underline; cursor: pointer; }
+a { color: #2d2d2d; text-decoration: none; text-decoration: underline; }
+a:hover { text-decoration: none; cursor: pointer; }
 
 
 /* Header */
@@ -22,10 +22,12 @@ a:hover { text-decoration: underline; cursor: pointer; }
   position: relative;
   height: 100%;
   text-align: center;
+  line-height: 65px;
 }
 
-#pg > header > div * {
+#pg > header > div > * {
   text-align: left;
+  vertical-align: top;
 }
 
 #pg > header > div > a {
@@ -154,7 +156,7 @@ ul.posts a {
 
 /* post page */
 .rdbWrapper { text-align: right; height: 2em; }
-.rdbWrapper #readabilityEmbedContainer { display: inline-block; width: 252px; }
+.rdbWrapper #readabilityEmbedContainer { display: inline-block; width: 272px; }
 
 article.post section.content > div {
   text-align: justify;

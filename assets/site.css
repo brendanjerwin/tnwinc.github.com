@@ -77,6 +77,11 @@ a:hover { text-decoration: underline; cursor: pointer; }
   white-space: nowrap;
 }
 
+#pg > header nav ul {
+  margin: 0;
+  padding: 0;
+}
+
 #pg > header nav li {
   display: inline-block;
   padding-right: 5px;
@@ -118,6 +123,7 @@ ul.posts li {
   border: 1px solid #DDD;
   margin-bottom: 20px;
 }
+article.post section.content > footer .date,
 ul.posts .date {
   display: inline-block;
   background: #F28320 url('/assets/themes/the-minimum/skin/100-90-5-monochrome.png');
@@ -130,6 +136,7 @@ ul.posts .date {
   font-weight: bold;
   margin-right: 10px;
 }
+article.post section.content > footer .author,
 ul.posts .author {
   display: inline-block;
   float: right;
@@ -145,6 +152,56 @@ ul.posts a {
 }
 
 
+/* post page */
+.rdbWrapper { text-align: right; height: 2em; }
+.rdbWrapper #readabilityEmbedContainer { display: inline-block; width: 252px; }
+
+article.post section.content > div {
+  text-align: justify;
+  line-height: 1.5em;
+  font-family: 'Crimson Text', serif;
+  font-size: 1.3em;
+}
+
+article.post section.content > footer {
+  line-height: 1.5em;
+  vertical-align: middle;
+  border: 1px solid #DDD;
+  margin: 45px 0 25px;
+}
+
+article.post section.content > footer * {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+article.post section.content > footer ul {
+  list-style: none;
+}
+
+article.post section.content > footer .social {
+  float: right;
+  padding: 4px 10px;
+}
+
+article.post section.content > footer .tags li {
+  margin-right: 10px;
+}
+
+article.post section.content > footer .tags a span {
+  padding: 1px 5px;
+  border-radius: 2em;
+  background: #F28320;
+  color: #fff;
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 1.3em;
+}
+
+article.post section.content > footer .twitter-tweet {
+  width: 68px;
+}
 
 
 /* Footer */
@@ -156,6 +213,7 @@ ul.posts a {
   background: url('/assets/themes/the-minimum/skin/100-90-5-monochrome.png') repeat 0 0 #4D4D4D;
   padding: 5px;
   font-size: 0.8em;
+  text-align: center;
 }
 
 #pg > footer p {

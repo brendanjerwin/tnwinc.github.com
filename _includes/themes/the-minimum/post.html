@@ -1,61 +1,51 @@
-<article class="unit-article layout-post">
-	<div class="unit-inner unit-article-inner">
-		<div class="content">
+<article class="post">
+  <div class="rdbWrapper" data-show-read="1" data-show-send-to-kindle="1" data-show-print="0" data-show-email="0" data-orientation="0" data-version="1" data-bg-color="transparent"></div><script type="text/javascript">(function() {var s = document.getElementsByTagName("script")[0],rdb = document.createElement("script"); rdb.type = "text/javascript"; rdb.async = true; rdb.src = document.location.protocol + "//www.readability.com/embed.js"; s.parentNode.insertBefore(rdb, s); })();</script>
 
-			<div class="bd">
-                <div class="entry-content">
-                    <div class="rdbWrapper" data-show-read="1" data-show-send-to-kindle="1" data-show-print="0" data-show-email="0" data-orientation="0" data-version="1" data-bg-color="transparent"></div><script type="text/javascript">(function() {var s = document.getElementsByTagName("script")[0],rdb = document.createElement("script"); rdb.type = "text/javascript"; rdb.async = true; rdb.src = document.location.protocol + "//www.readability.com/embed.js"; s.parentNode.insertBefore(rdb, s); })();</script>
-					{{ content }}
-                    <div class="meta">
-                        Author: <a href="mailto:{{ page.email }}?subject={{ page.title }}" rel="author">{{ page.author }}</a>
-						<p class="date-publish">
-							Published:
-							<date class="date-pub" title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}" pubdate>
-							<span class="month"><abbr>{{ page.date | date: '%B' }}</abbr></span>
-							<span class="day">{{ page.date | date: '%d' }}</span>
-							<span class="year">{{ page.date | date: '%Y' }}</span>
-							</date>
-						</p>
-						<ul class="list-tag list-linear">
-							<li class="list-head">tags: </li>
-							{% assign tags_list = page.tags %}
-							{% include JB/tags_list %}
-						</ul>
-					</div><!-- meta -->
-				</div><!-- entry-content -->
-				<div class="misc-content">
-					<div class="social">
-						<ul class="list-linear">
-							<li><div class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="{{ site.author.twitter }}" data-lang="en">Tweet</a></div></li>
-							<li><div class="twitter-follow"><a href="https://twitter.com/{{ site.author.twitter }}" class="twitter-follow-button" data-show-count="false" data-lang="en"></a></div></li>
-						</ul>
-					</div>
+  <section class="content">
+    <div>
+        {{ content }}
+    </div>
 
-					{% include JB/comments %}
-				</div><!-- misc-content -->
+    <footer>
+      <p class="author">by <a href="mailto:{{ page.email }}?subject={{ page.title }}" rel="author">{{ page.author }}</a></p>
+      <p class="date">
+        Published:
+        <time datetime="{{ page.date | date_to_xmlschema }}" pubdate>
+        {{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }}
+        </time>
+      </p>
+      <div class="tags">
+        <ul>
+          {% assign tags_list = page.tags %}
+          {% include JB/tags_list %}
+        </ul>
+      </div>
+      <div class="social">
+        <li><div class="twitter-tweet"><a href="https://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="{{ site.author.twitter }}" data-lang="en">Tweet</a></div></li>
+        <li><div class="twitter-follow"><a href="https://twitter.com/{{ site.author.twitter }}" class="twitter-follow-button" data-show-count="false" data-lang="en"></a></div></li>
+      </div>
+    </footer>
+  </section>
+  <section class="comments">
+      {% include JB/comments %}
+  </section>
 
-			</div><!-- bd -->
-			<footer class="unit-foot">
-				<div class="unit-inner unit-foot-inner">
-					<nav class="pagination">
-						<ul>
-							{% if page.previous %}
-							<li class="prev"><a class="internal" rel="prev"  href="{{ page.previous.url }}" title="View {{ page.previous.title }}">&laquo; {{ page.previous.title }}</a></li>
-							{% endif %}
-							{% if page.previous and page.next %}
-							<li class="pipe"> | </li>
-							{% endif %}
-							{% if page.next %}
-							<li class="next"><a class="internal" rel="next"  href="{{ page.next.url }}" title="View {{ page.next.title }}">{{ page.next.title }} &raquo;</a></li>
-							{% endif %}
-						</ul>
-					</nav>
-					<p class="gotop">
-						<a href="#page">Back to Top</a>
-					</p>
-				</div>
-			</footer>
-
-		</div><!-- content -->
-	</div><!-- unit-inner -->
+  <footer>
+    <nav>
+      <ul>
+        {% if page.previous %}
+        <li class="prev"><a class="internal" rel="prev"  href="{{ page.previous.url }}" title="View {{ page.previous.title }}">&laquo; {{ page.previous.title }}</a></li>
+        {% endif %}
+        {% if page.previous and page.next %}
+        <li class="pipe"> | </li>
+        {% endif %}
+        {% if page.next %}
+        <li class="next"><a class="internal" rel="next"  href="{{ page.next.url }}" title="View {{ page.next.title }}">{{ page.next.title }} &raquo;</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+    <p>
+      <a href="#">Back to Top</a>
+    </p>
+  </footer>
 </article>

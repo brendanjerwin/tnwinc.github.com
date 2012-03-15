@@ -47,7 +47,7 @@ task :post do
   title = ENV["title"] || "new-post"
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   begin
-    date = (Time.parse(ENV['date']) || Time.now).strftime('%Y-%m-%d')
+    date = (ENV['date'] || Time.now).strftime('%Y-%m-%d')
   rescue Exception => e
     puts "Error - date format must be YYYY-MM-DD, please check you typed it correctly!"
     exit -1
@@ -66,6 +66,8 @@ task :post do
     post.puts "author:"
     post.puts "mail:"
     post.puts "published: false"
+    post.puts "summary:"
+    post.puts "twitter-handle:"
     post.puts "---"
     post.puts "{% include JB/setup %}"
   end
@@ -97,7 +99,7 @@ end # task :page
 
 desc "Launch preview environment"
 task :preview do
-  system "jekyll --auto --server"
+  `bundle exec jekyll --auto --server`
 end # task :preview
 
 # Public: Alias - Maintains backwards compatability for theme switching.

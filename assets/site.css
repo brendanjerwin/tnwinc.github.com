@@ -281,7 +281,6 @@ article.post > footer nav .next {
   #pg > footer {
     position: static;
   }
-}
   article.post section.content > footer > .tags ,
   article.post section.content > footer > .author ,
   article.post section.content > footer > .date {
@@ -292,3 +291,4 @@ article.post > footer nav .next {
   article.post section.content > footer > .tags {
     padding: 5px 10px;
   }
+}

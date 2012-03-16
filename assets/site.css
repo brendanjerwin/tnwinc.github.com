@@ -207,11 +207,16 @@ article.post > footer nav ul {
   margin: 0;
   overflow: auto;
 }
+article.post > footer nav ul li {
+  max-width: 45%;
+}
 article.post > footer nav .prev {
   float: left;
+  text-align: left;
 }
 article.post > footer nav .next {
   float: right;
+  text-align: right;
 }
 
 
@@ -271,3 +276,19 @@ article.post > footer nav .next {
     margin-top: 0;
   }
 }
+@media screen and (max-width: 450px){
+  body { padding-bottom: 0; }
+  #pg > footer {
+    position: static;
+  }
+}
+  article.post section.content > footer > .tags ,
+  article.post section.content > footer > .author ,
+  article.post section.content > footer > .date {
+    display: block;
+    width: auto;
+    border-radius: none;
+  }
+  article.post section.content > footer > .tags {
+    padding: 5px 10px;
+  }

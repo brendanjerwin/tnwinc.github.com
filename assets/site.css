@@ -4,7 +4,7 @@ body { padding-bottom: 80px; }
   font: Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, "MS PGothic", Osaka, Sans-Serif;
 }
 
-a { color: #2d2d2d; text-decoration: none; text-decoration: underline; }
+a { color: #2d2d2d; text-decoration: none; text-decoration: underline; cursor: pointer; }
 a:hover { text-decoration: none; cursor: pointer; }
 
 
@@ -121,36 +121,24 @@ a:hover { text-decoration: none; cursor: pointer; }
 ul.posts { padding-top: 20px; list-style: none; }
 ul.posts li {
   line-height: 1.5em;
-  vertical-align: middle;
-  border: 1px solid #DDD;
   margin-bottom: 20px;
+  margin-left: -60px;
+  font-size: 1.2em;
+  padding: 10px 60px;
+  width: 100%;
+  cursor: pointer;
 }
-article.post section.content > footer .date,
-ul.posts .date {
-  display: inline-block;
-  background: #F28320 url('/assets/themes/the-minimum/skin/100-90-5-monochrome.png');
-  padding: 2px 10px;
-  border-top-right-radius: 1em;
-  border-bottom-right-radius: 1em;
+ul.posts li:hover {
+  box-shadow: 0 10px 10px -10px #999, 0 -10px 10px -10px #999;
+}
+ul.posts li > div {
+  padding: 5px 10px;
   font-size: 0.8em;
-  text-transform: uppercase;
-  color: #2D2D2D;
-  font-weight: bold;
-  margin-right: 10px;
-}
-article.post section.content > footer .author,
-ul.posts .author {
-  display: inline-block;
-  float: right;
-  padding: 2px 10px;
-  background: #BADA55 url('/assets/themes/the-minimum/skin/100-90-5-monochrome.png');
+  color: #333;
   font-style: italic;
-  font-size: 0.8em;
-  width: 150px;
-  text-align: right;
 }
-ul.posts a {
-  vertical-align: middle;
+ul.posts li a {
+  text-decoration: none;
 }
 
 
@@ -163,6 +151,29 @@ article.post section.content > div {
   line-height: 1.5em;
   font-family: 'Crimson Text', serif;
   font-size: 1.3em;
+}
+
+article.post section.content > footer .date {
+  display: inline-block;
+  background: #F28320 url('/assets/themes/the-minimum/skin/100-90-5-monochrome.png');
+  padding: 2px 10px;
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #2D2D2D;
+  font-weight: bold;
+  margin-right: 10px;
+}
+article.post section.content > footer .author {
+  display: inline-block;
+  float: right;
+  padding: 2px 10px;
+  background: #BADA55 url('/assets/themes/the-minimum/skin/100-90-5-monochrome.png');
+  font-style: italic;
+  font-size: 0.8em;
+  width: 150px;
+  text-align: right;
 }
 
 article.post section.content > footer {
@@ -203,6 +214,18 @@ article.post section.content > footer .tags a span {
 
 article.post section.content > footer .twitter-tweet {
   width: 68px;
+}
+
+article.post > footer nav ul {
+  padding: 0;
+  margin: 0;
+  overflow: auto;
+}
+article.post > footer nav .prev {
+  float: left;
+}
+article.post > footer nav .next {
+  float: right;
 }
 
 

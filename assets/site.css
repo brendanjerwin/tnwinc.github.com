@@ -276,7 +276,7 @@ article.post > footer nav .next {
     margin-top: 0;
   }
 }
-@media screen and (max-width: 450px){
+@media screen and (max-width: 700px){
   body { padding-bottom: 0; }
   #pg > footer {
     position: static;

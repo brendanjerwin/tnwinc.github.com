@@ -6,11 +6,15 @@ group: navigation
 ---
 {% include JB/setup %}
 
-<ul class="tag_box inline">
+<section class="tags">
   <header>Article Tags</header>
-  {% assign tags_list = site.tags %}
-  {% include JB/tags_list %}
-</ul>
+  <ul>
+    {% assign tags_list = site.tags %}
+    {% include JB/tags_list %}
+  </ul>
+</section>
 
-{% assign posts_collate = site.posts %}
-{% include JB/posts_collate %}
+<section class="archive">
+  {% assign posts_collate = site.posts %}
+  {% include JB/posts_collate %}
+</section>

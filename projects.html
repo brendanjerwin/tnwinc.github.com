@@ -7,12 +7,23 @@ group: navigation
 {% include JB/setup %}
 
 
-<ul class="tag_box inline">
-    <header>
+<section class="projects">
+    <h1>
         Some of our open source projects
-    </header>
-    <li><a href="https://github.com/tnwinc/Isolate"
-           title="Isolate is a tool to allow injection of module dependencies when doing Test Driven Javascript/Coffeescript development">isolate.js</a></li>
-    <li><a href="https://github.com/tnwinc/tnw_status_board"
-           title="agile team status board and irc bot">TNW Status Board</a></li>
-</ul>
+    </h1>
+    <ul id="projectsList">
+      <li><a href="https://github.com/tnwinc/Isolate"
+             title="Isolate is a tool to allow injection of module dependencies when doing Test Driven Javascript/Coffeescript development">isolate.js</a></li>
+      <li><a href="https://github.com/tnwinc/tnw_status_board"
+             title="agile team status board and irc bot">TNW Status Board</a></li>
+    </ul>
+</section>
+
+<script>
+  Array.prototype.forEach.call(document.getElementById('projectsList').getElementsByTagName('LI'), function(li){
+    var a = li.getElementsByTagName('A')[0];
+    li.onclick = function(){
+      window.location = a.href;
+    }
+  });
+</script>

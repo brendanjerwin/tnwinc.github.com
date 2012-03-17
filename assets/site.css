@@ -31,7 +31,7 @@ a:hover { text-decoration: none; cursor: pointer; }
 }
 
 #pg > header > div > a {
-  display: inline-block;
+  display: block;
   padding-top: 25px;
   width: 305px;
   height:100px;
@@ -42,7 +42,7 @@ a:hover { text-decoration: none; cursor: pointer; }
   background: #fff url('./logo.png') 50% 100% no-repeat;
   position: relative;
   top: -30px;
-  margin: 0 50px;
+  margin: 0 auto;
 
   -webkit-transition: box-shadow, top;
   -webkit-transition-duration: 100ms;
@@ -54,14 +54,16 @@ a:hover { text-decoration: none; cursor: pointer; }
 }
 
 #pg > header nav {
-  display: inline-block;
+  display: block;
   list-style-type: none;
   color: #2D2D2D;
   text-transform: uppercase;
   line-height: 65px;
   vertical-align: middle;
-  width: 1px;
   white-space: nowrap;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 #pg > header nav ul {
@@ -91,6 +93,7 @@ a:hover { text-decoration: none; cursor: pointer; }
   position: relative;
   width: 980px;
   margin: 0 auto;
+  font-family: 'Crimson Text', serif;
 }
 #pg > div h1 { line-height: 1.4em; }
 #pg > div > article > header {
@@ -104,26 +107,34 @@ a:hover { text-decoration: none; cursor: pointer; }
 }
 
 /* posts list */
-ul.posts { padding-top: 20px; list-style: none; }
-ul.posts li {
+ul.posts,
+section.projects ul {
+  padding-top: 20px;
+  list-style: none;
+  font-size: 1.5em;
+ }
+ul.posts li,
+section.projects li {
   line-height: 1.5em;
   margin-bottom: 20px;
   margin-left: -60px;
-  font-size: 1.2em;
   padding: 10px 60px;
   width: 100%;
   cursor: pointer;
 }
-ul.posts li:hover {
+ul.posts li:hover,
+section.projects li:hover {
   box-shadow: 0 10px 10px -10px #999, 0 -10px 10px -10px #999;
 }
-ul.posts li > div {
+ul.posts li > div,
+section.projects li > div {
   padding: 5px 10px;
   font-size: 0.8em;
   color: #333;
   font-style: italic;
 }
-ul.posts li a {
+ul.posts li a,
+section.projects li a {
   text-decoration: none;
 }
 
@@ -135,10 +146,10 @@ ul.posts li a {
 article.post section.content > div {
   text-align: justify;
   line-height: 1.5em;
-  font-family: 'Crimson Text', serif;
   font-size: 1.3em;
 }
 
+section.archive li .date,
 article.post section.content > footer .date {
   display: inline-block;
   background: #F28320 url('/assets/themes/the-minimum/skin/100-90-5-monochrome.png');
@@ -151,6 +162,7 @@ article.post section.content > footer .date {
   font-weight: bold;
   margin-right: 10px;
 }
+section.archive li .author,
 article.post section.content > footer .author {
   display: inline-block;
   float: right;
@@ -162,7 +174,8 @@ article.post section.content > footer .author {
   text-align: right;
 }
 
-article.post section.content > footer {
+article.post section.content > footer,
+section.archive li {
   line-height: 1.5em;
   vertical-align: middle;
   border: 1px solid #DDD;
@@ -183,12 +196,21 @@ article.post section.content > footer .social {
   float: right;
   padding: 4px 10px;
 }
-
 article.post section.content > footer .tags li {
-  margin-right: 10px;
+  padding-right: 10px;
+  display: inline-block;
+}
+article.post section.content > footer .tags span {
+  padding: 1px 5px;
 }
 
-article.post section.content > footer .tags a span {
+.tags li {
+  margin-right: 10px;
+  display: inline-block;
+  list-style: none;
+}
+
+.tags a span {
   padding: 1px 5px;
   border-radius: 2em;
   background: #F28320;
@@ -219,6 +241,28 @@ article.post > footer nav .next {
   text-align: right;
 }
 
+/* Archive Page */
+section.tags { padding: 10px 0; }
+section.tags header {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: inline-block;
+  padding-right: 1em;
+}
+section.tags ul {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+section.archive ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+section.archive li {
+  margin: 10px 0;
+}
 
 /* Footer */
 #pg > footer {
@@ -268,6 +312,7 @@ article.post > footer nav .next {
     width: auto;
     line-height: 2em;
     text-align: center;
+    position: static;
   }
   #pg > div {
     padding: 0 10px;
@@ -283,7 +328,9 @@ article.post > footer nav .next {
   }
   article.post section.content > footer > .tags ,
   article.post section.content > footer > .author ,
-  article.post section.content > footer > .date {
+  section.archive li .author,
+  article.post section.content > footer > .date,
+  section.archive li .date {
     display: block;
     width: auto;
     border-radius: none;

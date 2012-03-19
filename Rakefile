@@ -99,7 +99,7 @@ end # task :page
 
 desc "Launch preview environment"
 task :preview do
-  `bundle exec jekyll --auto --server`
+  puts `bundle exec jekyll --auto --server`
 end # task :preview
 
 # Public: Alias - Maintains backwards compatability for theme switching.

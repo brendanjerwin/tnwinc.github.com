@@ -1,9 +1,10 @@
 ---
 layout: post
 title: "Seating Arrangements for Agile Teams"
-tags: [philosophy, teams]
+tags: [teams]
 author: 'Brendan Erwin'
 email: 'brendanjerwin@gmail.com'
+twitter-handle: brendanjerwin
 published: true
 ---
 {% include JB/setup %}

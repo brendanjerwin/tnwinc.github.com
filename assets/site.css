@@ -149,6 +149,26 @@ article.post section.content > div {
   font-size: 1.3em;
 }
 
+article.post section.content code {
+    font-size: 0.9em;
+    border: 1px dashed #AAA;
+    display: block;
+    padding: 10px;
+    line-height: 1.3em;
+    background: #EEE;
+}
+
+article.post section.content p code {
+    padding: 0 3px;
+    display: inline-block;
+}
+
+article.post section.content img {
+    display: block;
+    margin: 1em auto;
+
+}
+
 section.archive li .date,
 article.post section.content > footer .date {
   display: inline-block;
@@ -325,6 +345,11 @@ section.archive li {
   body { padding-bottom: 0; }
   #pg > footer {
     position: static;
+  }
+  h1 {
+    margin-top: 3px;
+    font-size: 1.2em;
+    text-align: center;
   }
   article.post section.content > footer > .tags ,
   article.post section.content > footer > .author ,

@@ -166,7 +166,7 @@ article.post section.content p code {
 article.post section.content img {
     display: block;
     margin: 1em auto;
-
+    max-width: 80%;
 }
 
 section.archive li .date,

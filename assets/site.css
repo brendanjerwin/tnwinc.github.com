@@ -351,6 +351,15 @@ section.archive li {
     font-size: 1.2em;
     text-align: center;
   }
+  h2 {
+    margin-top: 3px;
+    font-size: 1em;
+    text-align: center;
+  }
+  h3 {
+    font-size: 1em;
+    text-align: center;
+  }
   article.post section.content > footer > .tags ,
   article.post section.content > footer > .author ,
   section.archive li .author,

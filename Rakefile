@@ -13,6 +13,11 @@ CONFIG = {
   'theme_package_version' => "0.1.0"
 }
 
+def question(question)
+    STDOUT.puts question
+    STDIN.gets.strip
+end
+
 # Path configuration helper
 module JB
   class Path
@@ -44,7 +49,7 @@ end #JB
 desc "Begin a new post in #{CONFIG['posts']}"
 task :post do
   abort("rake aborted: '#{CONFIG['posts']}' directory not found.") unless FileTest.directory?(CONFIG['posts'])
-  title = ENV["title"] || "new-post"
+  title = ENV["title"] || question('name?')
   slug = title.downcase.strip.gsub(' ', '-').gsub(/[^\w-]/, '')
   begin
     date = (ENV['date'] || Time.now).strftime('%Y-%m-%d')

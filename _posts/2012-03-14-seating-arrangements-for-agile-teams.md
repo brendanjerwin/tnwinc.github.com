@@ -6,6 +6,7 @@ author: 'Brendan Erwin'
 email: 'brendanjerwin@gmail.com'
 twitter-handle: brendanjerwin
 published: true
+summary: Sometimes a small change can produce a big benefit in communication
 ---
 {% include JB/setup %}
 

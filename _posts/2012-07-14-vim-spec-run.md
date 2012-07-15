@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "vim spec run"
-tags: []
+tags: [vim, projects]
 author: Brendan Erwin
 mail: brendanjerwin@gmail.com
 published: true

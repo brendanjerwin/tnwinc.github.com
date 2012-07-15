@@ -1,16 +1,16 @@
 ---
 layout: post
-title: "vim spec run"
+title: "vim spec runner"
 tags: [vim, projects]
 author: Brendan Erwin
 mail: brendanjerwin@gmail.com
 published: true
-summary: "vim-spec-run: a Vim plugin to run your specs."
+summary: "vim-spec-runner: a Vim plugin to run your specs."
 twitter-handle: brendanjerwin
 ---
 {% include JB/setup %}
 
-`vim-spec-run` is a Vim plugin we developed to make running our specs
+`vim-spec-runner` is a Vim plugin we developed to make running our specs
 (CoffeeScript + Mocha) quick and awesome.
 
 It is designed to work with either `screen` and Terminal.app, or
